@@ -595,3 +595,62 @@ footer hr {
 footer>p {
     text-align: center;
 }
+
+.services {
+    text-align: center;
+}
+
+.services p {
+    font-size: 12px;
+}
+
+.highlight {
+    color: #FA9021;
+}
+
+.countries {
+    padding: 70px 0;
+    background: #1C140F;
+    display: flex;
+    justify-content: center;
+    gap: 120px;
+}
+
+.country:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: -200px;
+    top: -90%;
+    height: 290%;
+    width: 2px;
+    background-color: rgba(165, 163, 163, 0.3);
+}
+
+.country {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 0 40px;
+    position: relative;
+}
+
+.country img {
+    margin-right: 10px;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.video {
+    margin-top: 200px;
+}
+
+.video img {
+    position: absolute;
+}
+
+.video .text {
+    width: 500px;
+}
