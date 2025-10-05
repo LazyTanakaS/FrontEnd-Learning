@@ -439,7 +439,7 @@ header nav ul li.btn a:hover,
 .team .blocks .block {
     width: 22%;
     border-radius: 10px;
-    padding: 50px 35px;
+    padding: 25px 15px;
     background: #1C140F;
     text-align: center;
     margin-bottom: 30px;
@@ -459,9 +459,9 @@ header nav ul li.btn a:hover,
 }
 
 .team .blocks .block img {
+    width: 50%;
     position: relative;
-    top: -120px;
-    right: -20px;
+    margin-bottom: 20px;
 }
 
 /* Contact us */
