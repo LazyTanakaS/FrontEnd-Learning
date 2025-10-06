@@ -65,24 +65,39 @@ header nav ul li a {
     color: #fff;
 }
 
-header nav ul li.active::after {
-    content: "";
-    display: block;
-    width: 40px;
-    height: 5px;
-    background: #DC7000;
-    border-radius: 9px;
+nav a:not(.btn a) {
     position: relative;
-    top: 10px;
-    left: -15px;
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
 }
 
-header nav ul li:not(.active):not(.btn) a:hover {
-    border-bottom: 5px solid #DC7000;
+nav a:not(.btn a)::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background-color: #ff6600;
+    transition: width 0.3s;
 }
+
+nav a:not(.btn a):hover {
+    color: #ff6600;
+}
+
+nav a:not(.btn a):hover::after {
+    width: 100%;
+}
+
 
 header nav ul li.btn a,
-.email .block button {
+.email .block button,
+.game1 button,
+.game2 button,
+.game3 button {
     background-color: #FA9021;
     padding: 9px 17px;
     border-radius: 5px;
@@ -90,7 +105,10 @@ header nav ul li.btn a,
 }
 
 header nav ul li.btn a:hover,
-.email .block button:hover {
+.email .block button:hover,
+.game1 button:hover,
+.game2 button:hover,
+.game3 button:hover {
     background-color: #8f4b03;
 }
 
@@ -354,6 +372,7 @@ header nav ul li.btn a:hover,
     position: absolute;
     right: -130px;
     top: 0;
+    border-radius: 25px;
 }
 
 .hero-about .info {
@@ -414,19 +433,27 @@ header nav ul li.btn a:hover,
 }
 
 .work .big-block {
+    display: flex;
+    align-items: center;
+    gap: 200px;
     padding: 70px;
     margin-top: 100px;
     background: #1C140F;
+    border-radius: 20px;
 }
 
 .work .big-block .info {
-    width: 500px;
-    margin-left: 700px;
+    flex: 1 1 0;
+    max-width: 620px;
 }
 
 .work .big-block img {
-    position: absolute;
-    bottom: -800px;
+    flex: 0 0 450px;
+    max-width: 40%;
+    height: auto;
+    border-radius: 16px;
+    object-fit: cover;
+    display: block;
 }
 
 
@@ -596,6 +623,8 @@ footer>p {
     text-align: center;
 }
 
+/* Portfolio Page*/
+
 .services {
     text-align: center;
 }
@@ -614,6 +643,7 @@ footer>p {
     display: flex;
     justify-content: center;
     gap: 120px;
+    border-radius: 25px;
 }
 
 .country:not(:last-child)::after {
@@ -630,27 +660,252 @@ footer>p {
     display: flex;
     align-items: center;
     gap: 15px;
-    padding: 0 40px;
+    padding: 50 40px;
     position: relative;
 }
 
-.country img {
+.container.video,
+.container .game2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    padding: 75px;
+}
+
+.container.video img {
+    width: 45%;
+    border-radius: 10px;
+    margin: 0;
+}
+
+.video.text {
+    max-width: 45%;
+    text-align: left;
+}
+
+.video.text h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.video.text p {
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+.video.text span {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.video.text span img {
+    width: 20px;
     margin-right: 10px;
 }
 
-.text-container {
+.game1,
+.game3 {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.video {
-    margin-top: 200px;
+.game1 .info,
+.game2 .info,
+.game3 .info {
+    max-width: 750px;
+    font-size: 17px;
 }
 
-.video img {
+.game1 .info h3,
+.game2 .info h3,
+.game3 .info h3 {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.game1 .info p,
+.game2 .info p,
+.game3 .info p {
+    margin-bottom: 30px;
+}
+
+.game1 img,
+.game3 img,
+.game2 img {
+    width: 50%;
+    max-width: 100%;
+}
+
+.game2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    padding: 75px;
+}
+
+.game2 img {
+    width: 45%;
+    border-radius: 10px;
+    margin: 0;
+}
+
+/* Reviev section */
+
+.reviews-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    background: #1C140F;
+    padding: 40px;
+    color: #fff;
+    font-family: sans-serif;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.reviews-info .info h3 {
+    font-size: 35px;
+    max-width: 500px;
+    margin-bottom: 25px;
+}
+
+.reviews-info .info p {
+    font-size: 14px;
+    max-width: 500px;
+}
+
+.reviews {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    background: #1C140F;
+    padding: 40px;
+    color: #fff;
+    font-family: sans-serif;
+}
+
+.card {
+    position: relative;
+    background: #1C140F;
+    border: 1.5px solid rgba(255, 255, 255, 0.4);
+    border-radius: 12px;
+    padding: 20px;
+    width: 300px;
+    transition: 0.3s;
+    margin-bottom: 100px;
+}
+
+.card:hover {
+    border-color: #ff9a3d;
+    box-shadow: 0 4px 18px rgba(255, 154, 61, 0.25);
+}
+
+.avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    float: left;
+    margin-right: 12px;
+}
+
+.info h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.city {
+    color: #9fb0c2;
+    font-size: 13px;
+    margin: 2px 0 10px;
+}
+
+.rating {
     position: absolute;
+    top: 20px;
+    right: 20px;
+    font-weight: 700;
 }
 
-.video .text {
-    width: 500px;
+.rating span {
+    color: #ff9a3d;
+}
+
+.text {
+    clear: both;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #e6e0db;
+    margin-top: 10px;
+}
+
+
+/* Button section */
+
+.slider-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0;
+    width: 100%;
+    margin-top: -110px;
+}
+
+.dots {
+    display: flex;
+    gap: 20px;
+}
+
+.dot {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    background: #eaeaea;
+    transition: background 0.3s, width 0.3, border-radius 0.3s;
+}
+
+.dot .active {
+    background: #DC7000;
+    width: 40px;
+    border-radius: 8px;
+}
+
+.arrows {
+    display: flex;
+    gap: 18px;
+}
+
+.arrow {
+    background: none;
+    border: 2px solid #DC7000;
+    color: #DC7000;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
+
+.arrow.next {
+    background: #DC7000;
+    color: #fff;
+    border: none;
+}
+
+.arrow:hover {
+    filter: brightness(0.9);
 }
