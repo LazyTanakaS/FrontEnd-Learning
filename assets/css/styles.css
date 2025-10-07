@@ -93,7 +93,7 @@ nav a:not(.btn a):hover::after {
 }
 
 header nav ul li.btn a,
-.email .block button {
+.email .stats__label button {
   background-color: #fa9021;
   padding: 9px 17px;
   border-radius: 5px;
@@ -101,51 +101,53 @@ header nav ul li.btn a,
 }
 
 header nav ul li.btn a:hover,
-.email .block button:hover {
+.email .stats__label button:hover {
   background-color: #8f4b03;
 }
 
 .hero {
-  padding-bottom: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 70px 0 100px;
   position: relative;
   z-index: 1;
 }
 
-.hero--info {
-  width: 530px;
-  padding-top: 70px;
+.hero .stats__value {
+  max-width: 560px;
+  padding-top: 0;
 }
 
-.hero--info h2 {
+.hero .stats__value h2 {
   color: #e87d0e;
   font-size: 20px;
   font-weight: 600;
 }
-
-.hero--info h1 {
+.hero .stats__value h1 {
   font-size: 50px;
   font-weight: 600;
 }
-
-.hero--info p {
+.hero .stats__value p {
   font-weight: 500;
   line-height: 170%;
-  margin: 30px 0;
+  margin-bottom: 30px;
 }
 
-.hero--info .btn,
-.hero-about .info .btn {
+.hero .stats__value .btn,
+.hero__about .info .btn {
   background: #fa9021;
   color: #fff;
   border-radius: 50px;
   padding: 15px 30px;
   border: 0;
-  transition: all 500ms ease;
+  transition: transform 500ms ease;
   font-size: 17px;
 }
 
-.hero--info .btn:hover,
-.hero-about .info .btn:hover {
+.hero .stats__value .btn:hover,
+.hero__about .info .btn:hover {
   cursor: pointer;
   transform: scale(1.1);
 }
@@ -166,8 +168,8 @@ header nav ul li.btn a:hover,
   font-size: 31px;
 }
 
-.trending .see--all,
-.project .see-all {
+.trending .see__all,
+.projects .see__all {
   color: #fff;
   background: #25211d;
   border-radius: 5px;
@@ -177,8 +179,8 @@ header nav ul li.btn a:hover,
   transition: all 500ms ease;
 }
 
-.trending .see--all:hover,
-.project .see-all:hover {
+.trending .see__all:hover,
+.projects .see__all:hover {
   transform: scale(1.1);
 }
 
@@ -199,9 +201,10 @@ header nav ul li.btn a:hover,
   position: relative;
   top: 5px;
   margin-right: 7px;
+  width: 25px;
 }
 
-.big-text {
+.big__text {
   padding: 50px;
   font-size: 35px;
   font-weight: 600;
@@ -233,7 +236,7 @@ header nav ul li.btn a:hover,
 /* Background saction */
 
 .features {
-  background: url('../img/BG.svg') no-repeat center center fixed;
+  background: url('../img/bg.svg') no-repeat center center fixed;
   background-size: cover;
   padding: 80px 80px;
 }
@@ -269,27 +272,27 @@ header nav ul li.btn a:hover,
 
 /* Project saction */
 
-.project {
+.projects {
   padding: 100px;
 }
 
-.project h3 {
+.projects h3 {
   font-size: 30px;
   text-align: center;
 }
 
-.project p {
+.projects p {
   margin: 40px 0;
   text-align: center;
 }
 
-.project .images {
+.projects .stats__icon {
   display: flex;
   justify-content: space-around;
   margin-bottom: 25px;
 }
 
-.project .see-all {
+.projects .see__all {
   float: none;
   width: 60px;
   text-align: center;
@@ -307,7 +310,7 @@ header nav ul li.btn a:hover,
   font-size: 30px;
 }
 
-.email .block {
+.email .stats__label {
   background: #1c140f;
   margin-top: 30px;
   border-radius: 10px;
@@ -318,16 +321,16 @@ header nav ul li.btn a:hover,
   align-items: center;
 }
 
-.email .block h4 {
+.email .stats__label h4 {
   font-size: 30px;
   font-weight: 500;
 }
 
-.email .block p {
+.email .stats__label p {
   width: 500px;
 }
 
-.email .block input {
+.email .stats__label input {
   background: #fff;
   outline: none;
   border: 0;
@@ -342,11 +345,11 @@ header nav ul li.btn a:hover,
   padding-right: 100px;
 }
 
-.email .block input::placeholder {
+.email .stats__label input::placeholder {
   color: #898989;
 }
 
-.email .block button {
+.email .stats__label button {
   cursor: pointer;
   border: 0;
   padding: 13px 17px;
@@ -356,75 +359,75 @@ header nav ul li.btn a:hover,
 }
 
 /* About us Page */
-.hero-about {
+.hero__about {
   position: relative;
 }
 
-.hero-about img {
+.hero__about img {
   position: absolute;
   right: -130px;
   top: 0;
   border-radius: 25px;
 }
 
-.hero-about .info {
+.hero__about .info {
   width: 500px;
   padding: 250px 0;
 }
 
-.hero-about .info h1 {
+.hero__about .info h1 {
   margin-bottom: 15px;
   font-size: 30px;
 }
 
-.hero-about .info .btn {
+.hero__about .info .btn {
   margin-top: 20px;
 }
 
-.work {
+.works {
   padding: 80px 0;
 }
 
-.work h2 {
+.works h2 {
   font-size: 25px;
   margin-bottom: 40px;
 }
 
-.work .blocks {
+.works .badges {
   display: flex;
   justify-content: space-between;
 }
 
-.work .blocks .block {
+.works .badges .badges__info {
   width: 25%;
   border-radius: 10px;
   padding: 50px 35px;
   background: #1c140f;
 }
 
-.work .blocks .block h3 {
+.works .badges .badges__info h3 {
   font-size: 20px;
   margin: 20px 0;
 }
 
-.work .blocks .block .badge {
+.works .badges .badges__info .badge {
   border-radius: 7px;
   padding: 10px 20px;
 }
 
-.work .blocks .block .badge.purple {
+.works .badges .badges__info .badge.purple {
   background: #2c1226;
 }
 
-.work .blocks .block .badge.green {
+.works .badges .badges__info .badge.green {
   background: #192a1d;
 }
 
-.work .blocks .block .badge.brown {
+.works .badges .badges__info .badge.brown {
   background: #31190d;
 }
 
-.work .big-block {
+.frame .frame__info {
   display: flex;
   align-items: center;
   gap: 200px;
@@ -434,12 +437,12 @@ header nav ul li.btn a:hover,
   border-radius: 20px;
 }
 
-.work .big-block .info {
+.frame .frame__info .frame__item {
   flex: 1 1 0;
   max-width: 620px;
 }
 
-.work .big-block img {
+.frame .frame__info img {
   flex: 0 0 450px;
   max-width: 40%;
   height: auto;
@@ -448,13 +451,13 @@ header nav ul li.btn a:hover,
   display: block;
 }
 
-.team .blocks {
+.team .members {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 
-.team .blocks .block {
+.team .members .member_item {
   width: 22%;
   border-radius: 10px;
   padding: 25px 15px;
@@ -463,20 +466,20 @@ header nav ul li.btn a:hover,
   margin-bottom: 30px;
 }
 
-.team .blocks .block h3 {
+.team .members .member_item h3 {
   font-size: 20px;
   margin: 20px 0;
   text-align: center;
   top: 100px;
 }
 
-.team .blocks .block p {
+.team .members .member_item p {
   font-size: 12px;
   text-align: center;
   top: 100px;
 }
 
-.team .blocks .block img {
+.team .members .member_item img {
   width: 50%;
   position: relative;
   margin-bottom: 20px;
@@ -633,7 +636,7 @@ footer > p {
   color: #fa9021;
 }
 
-.countries {
+.stats {
   padding: 70px 0;
   background: #1c140f;
   display: flex;
@@ -642,7 +645,7 @@ footer > p {
   border-radius: 25px;
 }
 
-.country:not(:last-child)::after {
+.stats__icon:not(:last-child)::after {
   content: '';
   position: absolute;
   right: -200px;
@@ -652,7 +655,7 @@ footer > p {
   background-color: rgba(165, 163, 163, 0.3);
 }
 
-.country {
+.stats__icon {
   display: flex;
   align-items: center;
   gap: 15px;
@@ -660,8 +663,8 @@ footer > p {
   position: relative;
 }
 
-.container.video,
-.container .game2 {
+.video,
+.games .game__item2 {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -669,36 +672,36 @@ footer > p {
   padding: 75px;
 }
 
-.container.video img {
+.video img {
   width: 45%;
   border-radius: 10px;
   margin: 0;
 }
 
-.video.text {
+.video .video__item {
   max-width: 45%;
   text-align: left;
 }
 
-.video.text h3 {
+.video .video__item h3 {
   font-size: 24px;
   font-weight: 700;
   color: #fff;
 }
 
-.video.text p {
+.video .video__item p {
   color: #ccc;
   margin-bottom: 20px;
 }
 
-.video.text span {
+.video .video__item span {
   display: flex;
   align-items: center;
   color: #fff;
   margin-bottom: 10px;
 }
 
-.video.text span img {
+.video .video__item span img {
   width: 20px;
   margin-right: 10px;
 }
@@ -727,29 +730,29 @@ footer > p {
   align-items: center;
 }
 
-.game1 .info,
-.game2 .info,
-.game3 .info {
+.game1 .game__item,
+.game2 .game__item,
+.game3 .game__item {
   max-width: 750px;
   font-size: 17px;
 }
 
-.game1 .info h3,
-.game2 .info h3,
-.game3 .info h3 {
+.game1 .game__item h3,
+.game2 .game__item h3,
+.game3 .game__item h3 {
   font-size: 30px;
   margin-bottom: 30px;
 }
 
-.game1 .info p,
-.game2 .info p,
-.game3 .info p {
+.game1 .game__item p,
+.game2 .game__item p,
+.game3 .game__item p {
   margin-bottom: 30px;
 }
 
-.game1 .info .btn,
-.game2 .info .btn,
-.game3 .info .btn {
+.game1 .game__item .btn,
+.game2 .game__item .btn,
+.game3 .game__item .btn {
   margin-top: 20px;
 }
 
@@ -758,6 +761,10 @@ footer > p {
 .game2 img {
   width: 50%;
   max-width: 100%;
+}
+
+.game1 img {
+  border-radius: 45px;
 }
 
 .game2 {
@@ -776,7 +783,7 @@ footer > p {
 
 /* Reviev section */
 
-.reviews-info {
+.reviews__info {
   display: flex;
   flex-wrap: wrap;
   gap: 40px;
@@ -789,13 +796,13 @@ footer > p {
   text-align: center;
 }
 
-.reviews-info .info h3 {
+.reviews__info .review__item h3 {
   font-size: 35px;
   max-width: 500px;
   margin-bottom: 25px;
 }
 
-.reviews-info .info p {
+.reviews__info .review__item p {
   font-size: 14px;
   max-width: 500px;
 }
@@ -847,7 +854,7 @@ footer > p {
   font-size: 13px;
   margin: 2px 0 10px;
 }
-t .raing {
+.rating {
   position: absolute;
   top: 20px;
   right: 20px;
