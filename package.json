@@ -1,0 +1,24 @@
+{
+  "name": "1",
+  "version": "1.0.0",
+  "description": "This repository is for practicing the GitHub, HTML, CSS and JS\r I wanteed to learn a little bit about GitHub and Git",
+  "main": "index.js",
+  "scripts": {
+    "format": "prettier . --write",
+    "format:check": "prettier . --check"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LazyTanakaS/FrontEnd-Learning.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LazyTanakaS/FrontEnd-Learning/issues"
+  },
+  "homepage": "https://github.com/LazyTanakaS/FrontEnd-Learning#readme",
+  "devDependencies": {
+    "prettier": "^3.6.2"
+  }
+}

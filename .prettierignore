@@ -1,0 +1,6 @@
+node_modules
+dist
+build
+assets/img
+*.min.css
+*.min.js
