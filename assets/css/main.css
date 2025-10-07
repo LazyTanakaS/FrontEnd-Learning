@@ -93,10 +93,7 @@ nav a:not(.btn a):hover::after {
 }
 
 header nav ul li.btn a,
-.email .block button,
-.game1 button,
-.game2 button,
-.game3 button {
+.email .block button {
   background-color: #fa9021;
   padding: 9px 17px;
   border-radius: 5px;
@@ -104,10 +101,7 @@ header nav ul li.btn a,
 }
 
 header nav ul li.btn a:hover,
-.email .block button:hover,
-.game1 button:hover,
-.game2 button:hover,
-.game3 button:hover {
+.email .block button:hover {
   background-color: #8f4b03;
 }
 
@@ -239,7 +233,7 @@ header nav ul li.btn a:hover,
 /* Background saction */
 
 .features {
-  background: url('/img/BG.svg') no-repeat center center fixed;
+  background: url('../img/BG.svg') no-repeat center center fixed;
   background-size: cover;
   padding: 80px 80px;
 }
@@ -709,6 +703,23 @@ footer > p {
   margin-right: 10px;
 }
 
+.game1 button,
+.game2 button,
+.game3 button {
+  background-color: #fa9021;
+  padding: 15px 70px;
+  transition: all 500ms ease;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 2px;
+}
+
+.game1 button:hover,
+.game2 button:hover,
+.game3 button:hover {
+  background-color: #8f4b03;
+}
+
 .game1,
 .game3 {
   display: flex;
@@ -734,6 +745,12 @@ footer > p {
 .game2 .info p,
 .game3 .info p {
   margin-bottom: 30px;
+}
+
+.game1 .info .btn,
+.game2 .info .btn,
+.game3 .info .btn {
+  margin-top: 20px;
 }
 
 .game1 img,
@@ -830,8 +847,7 @@ footer > p {
   font-size: 13px;
   margin: 2px 0 10px;
 }
-
-.rating {
+t .raing {
   position: absolute;
   top: 20px;
   right: 20px;
@@ -848,70 +864,4 @@ footer > p {
   line-height: 1.6;
   color: #e6e0db;
   margin-top: 10px;
-}
-
-/* Button section */
-
-.slider-controls {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 40px 0;
-  width: 100%;
-  margin-top: -110px;
-}
-
-.dots {
-  display: flex;
-  gap: 20px;
-}
-
-.dot {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  border-radius: 8px;
-  background: #eaeaea;
-  transition:
-    background 0.3s,
-    width 0.3,
-    border-radius 0.3s;
-}
-
-.dot .active {
-  background: #dc7000;
-  width: 40px;
-  border-radius: 8px;
-}
-
-.arrows {
-  display: flex;
-  gap: 18px;
-}
-
-.arrow {
-  background: none;
-  border: 2px solid #dc7000;
-  color: #dc7000;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 25px;
-  cursor: pointer;
-  transition:
-    background 0.3s,
-    color 0.3s;
-}
-
-.arrow.next {
-  background: #dc7000;
-  color: #fff;
-  border: none;
-}
-
-.arrow:hover {
-  filter: brightness(0.9);
 }
