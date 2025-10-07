@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -13,7 +13,7 @@
     />
     <meta name="author" content="GameWebsite Studio" />
     <title>Game Development Studio</title>
-    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
   </head>
 
   <body>
@@ -39,24 +39,24 @@
         <h3>Lorem Ipsum is simply dummy text of the printing and.</h3>
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
       </div>
-      <div class="container countries">
-        <div class="container country icon">
-          <img src="./assets/img/Client.svg" alt="" />
-          <div class="text-container">
+      <div class="container stats">
+        <div class="container stats__icon">
+          <img src="./assets/img/icons/client.svg" alt="" />
+          <div class="stats__value">
             <h3>90+</h3>
             <p>Clients</p>
           </div>
         </div>
-        <div class="container country icon">
-          <img src="./assets/img/Countrz.svg" alt="" />
-          <div class="text-container">
+        <div class="container stats__icon">
+          <img src="./assets/img/icons/countries.svg" alt="" />
+          <div class="stats__value">
             <h3>30+</h3>
             <p>Countries</p>
           </div>
         </div>
-        <div class="container country icon">
-          <img src="./assets/img/ProjectM.svg" alt="" />
-          <div class="text-container">
+        <div class="container stats__icon">
+          <img src="./assets/img/icons/projectm.svg" alt="" />
+          <div class="stats__value">
             <h3>50+</h3>
             <p>Projects</p>
           </div>
@@ -64,22 +64,22 @@
       </div>
 
       <div class="container video">
-        <img src="./assets/img/Hero Video.svg" alt="" />
-        <div class="video text">
+        <img src="./assets/img/hero-video.svg" alt="" />
+        <div class="video__item">
           <h3>Lorem Ipsum is simply dummy text.</h3>
           <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is
             simply dummy .
           </p>
-          <span><img src="./assets/img/done.svg" alt="" />Lorem Ipsum is simply</span>
-          <span><img src="./assets/img/done.svg" alt="" />Lorem Ipsum is simply</span>
-          <span><img src="./assets/img/done.svg" alt="" />Lorem Ipsum is simply</span>
-          <span><img src="./assets/img/done.svg" alt="" />Lorem Ipsum is simply</span>
+          <span><img src="./assets/img/icons/done.svg" alt="" />Lorem Ipsum is simply</span>
+          <span><img src="./assets/img/icons/done.svg" alt="" />Lorem Ipsum is simply</span>
+          <span><img src="./assets/img/icons/done.svg" alt="" />Lorem Ipsum is simply</span>
+          <span><img src="./assets/img/icons/done.svg" alt="" />Lorem Ipsum is simply</span>
         </div>
       </div>
 
       <div class="container game1">
-        <div class="info">
+        <div class="game__item">
           <h3>Lorem Ipsum is simply dummy text dummy text</h3>
           <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
@@ -90,12 +90,12 @@
           <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
           <button class="btn">Read more</button>
         </div>
-        <img src="./assets/img/About banner.svg" alt="" />
+        <img src="./assets/img/about-banner.svg" alt="" />
       </div>
 
       <div class="container game2">
-        <img src="./assets/img/Game2.svg" alt="" />
-        <div class="info">
+        <img src="./assets/img/game2.svg" alt="" />
+        <div class="game__item">
           <h3>Lorem Ipsum is simply dummy text dummy text</h3>
           <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
@@ -109,7 +109,7 @@
       </div>
 
       <div class="container game3">
-        <div class="info">
+        <div class="game__item">
           <h3>Lorem Ipsum is simply dummy text dummy text</h3>
           <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
@@ -120,11 +120,11 @@
           <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
           <button class="btn">Read more</button>
         </div>
-        <img src="./assets/img/Game3.svg" alt="" />
+        <img src="./assets/img/game3.svg" alt="" />
       </div>
 
-      <div class="reviews-info">
-        <div class="info">
+      <div class="reviews__info">
+        <div class="review__item">
           <h3>Trusted by Thousands of Happy Customer</h3>
           <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is
@@ -135,36 +135,42 @@
 
       <div class="reviews">
         <div class="card">
-          <img src="./assets/img/reviev2.svg" alt="" class="avatar" />
+          <img src="./assets/img/icons/review2.svg" alt="" class="avatar" />
           <div class="info">
             <h3>Yessica Christy</h3>
             <p class="city">Shanxi, China</p>
           </div>
-          <div class="rating">4.5 <span>★</span></div>
+          <div class="rating">
+            4.5 <span><img src="./assets/img/icons/4.5star-review.svg" alt="" /></span>
+          </div>
           <p class="text">
             Lorem Ipsum is simply dummy text of the printing and typesetting industry.
           </p>
         </div>
 
         <div class="card">
-          <img src="./assets/img/reviev1.svg" alt="" class="avatar" />
+          <img src="./assets/img/icons/review1.svg" alt="" class="avatar" />
           <div class="info">
             <h3>Viezh Robert</h3>
             <p class="city">Warsaw, Poland</p>
           </div>
-          <div class="rating">4.5 <span>★</span></div>
+          <div class="rating">
+            4.5 <span><img src="./assets/img/icons/4.5star-review.svg" alt="" /></span>
+          </div>
           <p class="text">
             Lorem Ipsum is simply dummy text of the printing and typesetting industry.
           </p>
         </div>
 
         <div class="card">
-          <img src="./assets/img/reviev3.svg" alt="" class="avatar" />
+          <img src="./assets/img/icons/review3.svg" alt="" class="avatar" />
           <div class="info">
             <h3>Kim Young Jou</h3>
             <p class="city">Seoul, South Korea</p>
           </div>
-          <div class="rating">4.5 <span>★</span></div>
+          <div class="rating">
+            4.5 <span><img src="./assets/img/icons/4.5star-review.svg" alt="" /></span>
+          </div>
           <p class="text">
             Lorem Ipsum is simply dummy text of the printing and typesetting industry.
           </p>
@@ -174,7 +180,7 @@
       <div class="container email">
         <h3>Lorem Ipsum</h3>
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-        <div class="block">
+        <div class="stats__label">
           <div>
             <h4>Stay in the loop</h4>
             <p>
@@ -211,7 +217,7 @@
           </div>
         </div>
         <hr />
-        <p>Copyright ® 2021 Lorem All rights Rcerved</p>
+        <p>Copyright Â® 2021 Lorem All rights Rcerved</p>
       </footer>
 
       <script>
