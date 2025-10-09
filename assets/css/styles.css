@@ -33,6 +33,8 @@ img {
   margin: 0 auto;
 }
 
+/* home page */
+
 header {
   padding: 50px 0;
 }
@@ -158,7 +160,6 @@ header nav ul li.btn a:hover,
   right: 0;
 }
 
-/* Game saction */
 .trending {
   padding-top: 50px;
 }
@@ -233,8 +234,6 @@ header nav ul li.btn a:hover,
   margin-bottom: 30px;
 }
 
-/* Background saction */
-
 .features {
   background: url('../img/bg.svg') no-repeat center center fixed;
   background-size: cover;
@@ -270,8 +269,6 @@ header nav ul li.btn a:hover,
   margin-bottom: 15px;
 }
 
-/* Project saction */
-
 .projects {
   padding: 100px;
 }
@@ -286,10 +283,37 @@ header nav ul li.btn a:hover,
   text-align: center;
 }
 
-.projects .stats__icon {
-  display: flex;
-  justify-content: space-around;
-  margin-bottom: 25px;
+.projects .projects__grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 25px;
+  grid-auto-rows: 120px;
+  grid-auto-flow: dense;
+  margin-bottom: 35px;
+}
+
+.item {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+  display: block;
+}
+
+.w1 {
+  grid-column: span 1;
+}
+
+.w2 {
+  grid-column: span 2;
+}
+
+.w3 {
+  grid-column: span 3;
+}
+
+.h2 {
+  grid-row: span 2;
 }
 
 .projects .see__all {
@@ -300,7 +324,6 @@ header nav ul li.btn a:hover,
   margin-right: auto;
 }
 
-/* Lower Saction */
 .email {
   padding-bottom: 120px;
 }
@@ -358,7 +381,7 @@ header nav ul li.btn a:hover,
   color: #fff;
 }
 
-/* About us Page */
+/* about__us Page */
 .hero__about {
   position: relative;
 }
@@ -485,7 +508,7 @@ header nav ul li.btn a:hover,
   margin-bottom: 20px;
 }
 
-/* Contact us */
+/* contacts page */
 .hero-contact h1 {
   text-align: center;
   margin-top: 70px;
@@ -574,49 +597,7 @@ header nav ul li.btn a:hover,
   background: #a51b02;
 }
 
-/* Footer */
-
-footer {
-  background: #000000;
-  padding: 50px 0;
-}
-
-footer .block {
-  display: flex;
-  justify-content: space-between;
-}
-
-footer .block p {
-  width: 300px;
-  margin: 15px 0;
-}
-
-footer .block h4 {
-  font-weight: 500;
-  font-size: 17px;
-}
-
-footer .block ul {
-  list-style: none;
-}
-
-footer .block ul li {
-  margin-top: 5px;
-  opacity: 0.8;
-}
-
-footer hr {
-  margin: 30px 0;
-  border: 0;
-  height: 1px;
-  background: #ccc;
-}
-
-footer > p {
-  text-align: center;
-}
-
-/* Portfolio Page*/
+/* portfolio page*/
 
 .services {
   text-align: center;
@@ -643,23 +624,25 @@ footer > p {
   justify-content: center;
   gap: 120px;
   border-radius: 25px;
+  position: relative;
 }
 
 .stats__icon:not(:last-child)::after {
   content: '';
   position: absolute;
-  right: -200px;
-  top: -90%;
-  height: 290%;
+  top: 50%;
+  right: -260px;
+  transform: translateY(-50%);
+  height: 100%;
   width: 2px;
-  background-color: rgba(165, 163, 163, 0.3);
+  background-color: #fff;
 }
 
 .stats__icon {
   display: flex;
   align-items: center;
   gap: 15px;
-  padding: 50 40px;
+  padding: 50px 40px;
   position: relative;
 }
 
@@ -781,8 +764,6 @@ footer > p {
   margin: 0;
 }
 
-/* Reviev section */
-
 .reviews__info {
   display: flex;
   flex-wrap: wrap;
@@ -871,4 +852,46 @@ footer > p {
   line-height: 1.6;
   color: #e6e0db;
   margin-top: 10px;
+}
+
+/* Footer */
+
+footer {
+  background: #000000;
+  padding: 50px 0;
+}
+
+footer .block {
+  display: flex;
+  justify-content: space-between;
+}
+
+footer .block p {
+  width: 300px;
+  margin: 15px 0;
+}
+
+footer .block h4 {
+  font-weight: 500;
+  font-size: 17px;
+}
+
+footer .block ul {
+  list-style: none;
+}
+
+footer .block ul li {
+  margin-top: 5px;
+  opacity: 0.8;
+}
+
+footer hr {
+  margin: 30px 0;
+  border: 0;
+  height: 1px;
+  background: #ccc;
+}
+
+footer > p {
+  text-align: center;
 }
