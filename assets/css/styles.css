@@ -126,12 +126,12 @@ nav .active {
   padding-top: 0;
 }
 
-.hero .stats__value h2 {
+.hero .stats__value h1 {
   color: #e87d0e;
   font-size: 20px;
   font-weight: 600;
 }
-.hero .stats__value h1 {
+.hero .stats__value h2 {
   font-size: 50px;
   font-weight: 600;
 }
