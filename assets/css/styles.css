@@ -107,6 +107,10 @@ header nav ul li.btn a:hover,
   background-color: #8f4b03;
 }
 
+nav .active {
+  color: #dc7000;
+}
+
 .hero {
   display: flex;
   align-items: center;
