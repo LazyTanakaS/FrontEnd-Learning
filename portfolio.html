@@ -35,7 +35,10 @@
       </header>
 
       <div class="container services">
-        <p>Home > <span class="highlight">Portfolio</span></p>
+        <p>
+          Home >
+          <span class="highlight">Portfolio</span>
+        </p>
         <h3>Lorem Ipsum is simply dummy text of the printing and.</h3>
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
       </div>
@@ -71,22 +74,22 @@
             Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is
             simply dummy .
           </p>
-          <span
-            ><img src="./assets/img/icons/done.svg" alt="" decoding="async" />Lorem Ipsum is
-            simply</span
-          >
-          <span
-            ><img src="./assets/img/icons/done.svg" alt="" decoding="async" />Lorem Ipsum is
-            simply</span
-          >
-          <span
-            ><img src="./assets/img/icons/done.svg" alt="" decoding="async" />Lorem Ipsum is
-            simply</span
-          >
-          <span
-            ><img src="./assets/img/icons/done.svg" alt="" decoding="async" />Lorem Ipsum is
-            simply</span
-          >
+          <span>
+            <img src="./assets/img/icons/done.svg" alt="" decoding="async" />
+            Lorem Ipsum is simply
+          </span>
+          <span>
+            <img src="./assets/img/icons/done.svg" alt="" decoding="async" />
+            Lorem Ipsum is simply
+          </span>
+          <span>
+            <img src="./assets/img/icons/done.svg" alt="" decoding="async" />
+            Lorem Ipsum is simply
+          </span>
+          <span>
+            <img src="./assets/img/icons/done.svg" alt="" decoding="async" />
+            Lorem Ipsum is simply
+          </span>
         </div>
       </div>
 
@@ -218,46 +221,47 @@
               you!
             </p>
           </div>
-          <div>
-            <input type="email" id="emailField" placeholder="Enter email address" />
-            <button onclick="checkEmail()">Continue</button>
+          <div class="stats__controls">
+            <input type="email" placeholder="Enter email address" />
+            <button type="submit">Continue</button>
           </div>
         </div>
       </div>
 
-      <footer>
-        <div class="block container">
-          <div>
-            <span class="logo">Logo</span>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-          </div>
-          <div>
-            <h4>About us</h4>
-            <ul>
-              <li>Zeux</li>
-              <li>Portfolio</li>
-              <li>Careers</li>
-              <li>Contact us</li>
-            </ul>
-          </div>
-          <div>
-            <h4>Contact us</h4>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-            <p>+908 89097 890</p>
-          </div>
+    <footer>
+      <div class="block container">
+        <div>
+          <span class="logo">Logo</span>
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
         </div>
-        <hr />
-        <p>Copyright © 2025 Lorem All rights Reserved</p>
-      </footer>
+        <div>
+          <h4>About us</h4>
+          <ul>
+            <li>Zeux</li>
+            <li>Portfolio</li>
+            <li>Careers</li>
+            <li>Contact us</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact us</h4>
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+          <p>+908 89097 890</p>
+        </div>
+      </div>
+      <hr />
+      <p>Copyright © 2025 Lorem All rights Reserved</p>
+    </footer>
 
-      <script>
-        function checkEmail() {
-          let email = document.querySelector('#emailField').value;
-          if (!email.includes('@')) alert('Missing @ symbol in email');
-          else if (!email.includes('.')) alert('Missing . in email');
-          else alert('All good!');
-        }
-      </script>
-    </div>
+    <script>
+      function checkEmail() {
+        let email = document.querySelector("#emailField").value;
+        if (!email.includes("@")) alert("Missing @ symbol in email");
+        else if (!email.includes(".")) alert("Missing . in email");
+        else alert("All good!");
+      }
+    </script>
+
+    <script src="./assets/js/activepage.js" defer></script>
   </body>
 </html>

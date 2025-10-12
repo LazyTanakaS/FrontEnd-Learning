@@ -144,13 +144,25 @@
         <h3>Our Recent Projects</h3>
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
         <div class="projects__grid">
-          <img class="item w2 h2" src="./assets/img/project.svg" alt="Project 1 thumbnail" />
-          <img class="item w2 h2" src="./assets/img/project2.svg" alt="Project 2 thumbnail" />
-          <img class="item w2 h2" src="./assets/img/project3.svg" alt="Project 3 thumbnail" />
+          <div class="item">
+            <img class="item" src="./assets/img/project.svg" alt="Project 1 thumbnail" />
+          </div>
+          <div class="item">
+            <img class="item" src="./assets/img/project2.svg" alt="Project 2 thumbnail" />
+          </div>
+          <div class="item">
+            <img class="item" src="./assets/img/project3.svg" alt="Project 3 thumbnail" />
+          </div>
 
-          <img class="item w1 h2" src="./assets/img/project4.svg" alt="Project 4 thumbnail" />
-          <img class="item w2 h2" src="./assets/img/project5.svg" alt="Project 5 thumbnail" />
-          <img class="item w3 h2" src="./assets/img/project6.svg" alt="Project 6 thumbnail" />
+          <div class="item">
+            <img class="item" src="./assets/img/project4.svg" alt="Project 4 thumbnail" />
+          </div>
+          <div class="item">
+            <img class="item" src="./assets/img/project5.svg" alt="Project 5 thumbnail" />
+          </div>
+          <div class="item">
+            <img class="item" src="./assets/img/project6.svg" alt="Project 6 thumbnail" />
+          </div>
         </div>
         <a href="./portfolio.html" class="btn">SEE ALL</a>
       </div>
@@ -166,9 +178,9 @@
               you!
             </p>
           </div>
-          <div>
-            <input type="email" id="emailField" placeholder="Enter email address" />
-            <button onclick="checkEmail()">Continue</button>
+          <div class="stats__controls">
+            <input type="email" placeholder="Enter email address" />
+            <button type="submit">Continue</button>
           </div>
         </div>
       </div>
@@ -207,5 +219,7 @@
         else alert("All good!");
       }
     </script>
+
+    <script src="./assets/js/activepage.js" defer></script>
   </body>
 </html>

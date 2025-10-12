@@ -32,7 +32,10 @@
     </header>
 
     <div class="container services">
-      <p>Home > <span class="highlight">Contacts</span></p>
+      <p>
+        Home >
+        <span class="highlight">Contacts</span>
+      </p>
     </div>
 
     <div class="container hero-contact">
@@ -78,9 +81,9 @@
             Subscribe to receive the latest news and updates about TDA. We promise not to spam you!
           </p>
         </div>
-        <div>
-          <input type="email" id="emailField" placeholder="Enter email address" />
-          <button onclick="checkEmail()">Continue</button>
+        <div class="stats__controls">
+          <input type="email" placeholder="Enter email address" />
+          <button type="submit">Continue</button>
         </div>
       </div>
     </div>
@@ -112,11 +115,13 @@
 
     <script>
       function checkEmail() {
-        let email = document.querySelector('#emailField').value;
-        if (!email.includes('@')) alert('Missing @ symbol in email');
-        else if (!email.includes('.')) alert('Missing . in email');
-        else alert('All good!');
+        let email = document.querySelector("#emailField").value;
+        if (!email.includes("@")) alert("Missing @ symbol in email");
+        else if (!email.includes(".")) alert("Missing . in email");
+        else alert("All good!");
       }
     </script>
+
+    <script src="./assets/js/activepage.js" defer></script>
   </body>
 </html>

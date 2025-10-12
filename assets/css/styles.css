@@ -1,4 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800&display=swap");
+
+/* ===== Breakpoints ===== */
+@media (max-width: 1400px) {
+}
+@media (max-width: 1200px) {
+}
+@media (max-width: 992px) {
+}
+@media (max-width: 768px) {
+}
+@media (max-width: 576px) {
+}
 
 * {
   margin: 0;
@@ -6,7 +18,7 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 400;
   color: #fff;
   font-size: 16px;
@@ -29,8 +41,9 @@ img {
 }
 
 .container {
-  max-width: 1700px;
+  max-width: 85%;
   margin: 0 auto;
+  padding: 16 24px;
 }
 
 /* home page */
@@ -67,7 +80,7 @@ header nav ul li a {
   color: #fff;
 }
 
-nav a:not(.btn a) {
+nav li:not(.btn) a {
   position: relative;
   display: inline-block;
   text-decoration: none;
@@ -75,8 +88,8 @@ nav a:not(.btn a) {
   transition: color 0.3s;
 }
 
-nav a:not(.btn a)::after {
-  content: '';
+nav li:not(.btn) a::after {
+  content: "";
   position: absolute;
   left: 0;
   bottom: -5px;
@@ -86,29 +99,33 @@ nav a:not(.btn a)::after {
   transition: width 0.3s;
 }
 
-nav a:not(.btn a):hover {
+nav li:not(.btn) a:hover {
   color: #ff6600;
 }
 
-nav a:not(.btn a):hover::after {
+nav li:not(.btn) a:hover::after {
   width: 100%;
 }
 
-header nav ul li.btn a,
-.email .stats__label button {
+header nav ul li.btn a {
   background-color: #fa9021;
   padding: 9px 17px;
   border-radius: 5px;
   transition: all 500ms ease;
 }
 
-header nav ul li.btn a:hover,
-.email .stats__label button:hover {
+header nav ul li.btn a:hover {
   background-color: #8f4b03;
 }
 
-nav .active {
-  color: #dc7000;
+nav li a.active {
+  color: #ff6600;
+  transition: color 0.3s;
+}
+
+nav li a.active::after {
+  width: 100%;
+  transition: width 0.3s;
 }
 
 .hero {
@@ -122,7 +139,7 @@ nav .active {
 }
 
 .hero .stats__value {
-  max-width: 560px;
+  max-width: 35%;
   padding-top: 0;
 }
 
@@ -229,7 +246,7 @@ nav .active {
 .banner p {
   line-height: 170%;
   margin-bottom: 30px;
-  width: 550px;
+  width: 35%;
 }
 
 .banner img {
@@ -238,7 +255,7 @@ nav .active {
 }
 
 .features {
-  background: url('../img/bg.svg') no-repeat center center fixed;
+  background: url("../img/bg.svg") no-repeat center center fixed;
   background-size: cover;
   padding: 80px 80px;
 }
@@ -247,7 +264,7 @@ nav .active {
 .features p {
   margin-bottom: 20px;
   text-align: center;
-  max-width: 800px;
+  max-width: 75%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -273,7 +290,7 @@ nav .active {
 }
 
 .projects {
-  padding: 100px;
+  padding: 100px 24px;
 }
 
 .projects h3 {
@@ -286,37 +303,46 @@ nav .active {
   text-align: center;
 }
 
-.projects .projects__grid {
+.projects__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  grid-auto-rows: clamp(90px, 12vw, 140px);
-  gap: clamp(16px, 2vw, 25px);
-  grid-auto-flow: dense;
-  margin-bottom: 35px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin: 0 auto 35px;
+  max-width: 1200px;
+}
+
+@media (max-width: 1200px) {
+  .projects__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .projects__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .projects__grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
 }
 
 .item {
+  background: #0f0f0f;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  position: relative;
+}
+
+.item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 15px;
   display: block;
-}
-
-.w1 {
-  grid-column: span 1;
-}
-
-.w2 {
-  grid-column: span 2;
-}
-
-.w3 {
-  grid-column: span 3;
-}
-
-.h2 {
-  grid-row: span 2;
+  object-position: center;
 }
 
 .projects .btn {
@@ -345,60 +371,108 @@ nav .active {
 }
 
 .email {
-  padding-bottom: 120px;
-}
-
-.email h3 {
-  margin-top: 60px;
-  font-size: 30px;
+  max-width: auto;
+  margin-bottom: 50px;
+  margin-top: 50px;
 }
 
 .email .stats__label {
-  background: #1c140f;
-  margin-top: 30px;
-  border-radius: 10px;
-  padding: 40px 3%;
-  width: 94%;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  flex-wrap: wrap;
+  background: #1c140f;
+  margin: 25px auto 0;
+  padding: 40px 48px;
+  border-radius: 18px;
+  max-width: auto;
 }
 
 .email .stats__label h4 {
   font-size: 30px;
-  font-weight: 500;
+  font-weight: 600;
+  margin: 0 0 8px;
 }
 
 .email .stats__label p {
-  width: 500px;
+  width: 100%;
+  max-width: 520px;
+  margin: 0;
+  opacity: 0.9;
 }
 
-.email .stats__label input {
-  background: #fff;
-  outline: none;
-  border: 0;
-  border-radius: 5px;
-  width: 380px;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 16px;
-  padding: 20px 30px;
+.email .stats__controls {
   position: relative;
-  right: -100px;
-  z-index: 1;
-  padding-right: 100px;
+  display: flex;
+  align-items: center;
+  width: 520px;
+  max-width: 100%;
 }
 
-.email .stats__label input::placeholder {
+.email .stats__controls input {
+  width: 100%;
+  background: #fff;
+  color: #333;
+  border: none;
+  border-radius: 8px;
+  padding: 16px 140px 16px 20px;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  line-height: 1;
+  box-sizing: border-box;
+}
+
+.email .stats__controls input::placeholder {
   color: #898989;
 }
 
-.email .stats__label button {
-  cursor: pointer;
-  border: 0;
-  padding: 13px 17px;
-  position: relative;
-  z-index: 2;
+.email .stats__controls button {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 40px;
+  padding: 0 20px;
+  background-color: #fa9021;
   color: #fff;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  font-size: 15px;
+  line-height: 40px;
+}
+
+.email .stats__controls button:hover {
+  background-color: #8f4b03;
+}
+
+@media (max-width: 768px) {
+  .email .stats__label {
+    justify-content: center;
+    padding: 24px 20px;
+    gap: 16px;
+  }
+
+  .email .stats__controls {
+    width: 100%;
+    display: block;
+    position: static;
+  }
+
+  .email .stats__controls input {
+    padding: 14px 16px;
+  }
+
+  .email .stats__controls button {
+    position: static;
+    transform: none;
+    width: 100%;
+    margin-top: 10px;
+    line-height: 44px;
+    height: 44px;
+  }
 }
 
 /* about__us Page */
@@ -415,7 +489,7 @@ nav .active {
 
 .hero__about .info {
   width: 500px;
-  padding: 250px 0;
+  padding: 15rem 0;
 }
 
 .hero__about .info h1 {
@@ -563,7 +637,7 @@ nav .active {
 
 .feedback form {
   margin: 80px auto;
-  width: 600px;
+  width: 50%;
 }
 
 .feedback form .inline {
@@ -650,20 +724,21 @@ nav .active {
   background: #1c140f;
   display: flex;
   justify-content: center;
-  gap: 120px;
+  gap: var(--gap, 80px);
   border-radius: 25px;
   position: relative;
 }
 
 .stats__icon:not(:last-child)::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 50%;
-  right: -260px;
-  transform: translateY(-50%);
+  right: calc(var(--gap, 80px) / -2);
+  transform: translate(-50%, -50%);
   height: 100%;
   width: 2px;
   background-color: #fff;
+  pointer-events: none;
 }
 
 .stats__icon {
@@ -672,6 +747,16 @@ nav .active {
   gap: 15px;
   padding: 50px 40px;
   position: relative;
+  flex: 1;
+}
+
+@media (max-width: 992px) {
+  .stats {
+    --gap: 24px;
+  }
+  .stats__icon:not(:last-child)::after {
+    display: none;
+  }
 }
 
 .video,
@@ -744,7 +829,7 @@ nav .active {
 .game1 .game__item,
 .game2 .game__item,
 .game3 .game__item {
-  max-width: 750px;
+  max-width: 50%;
   font-size: 17px;
 }
 
@@ -807,13 +892,13 @@ nav .active {
 
 .reviews__info .review__item h3 {
   font-size: 35px;
-  max-width: 500px;
+  max-width: 85%;
   margin-bottom: 25px;
 }
 
 .reviews__info .review__item p {
   font-size: 14px;
-  max-width: 500px;
+  max-width: 85%;
 }
 
 .reviews {
@@ -852,7 +937,7 @@ nav .active {
   margin-right: 12px;
 }
 
-.info h3 {
+.info h2 {
   margin: 0;
   font-size: 16px;
   font-weight: 700;
@@ -892,7 +977,7 @@ nav .active {
   align-items: center;
   gap: 12px;
   width: 100%;
-  max-width: 400px;
+  max-width: 25%;
 }
 
 .search__bar .icon {
@@ -915,7 +1000,7 @@ nav .active {
 
 .grid {
   display: grid;
-  grid-template-columns: 1000px 650px;
+  grid-template-columns: 2fr 1fr;
   margin-top: 75px;
   gap: 40px;
   align-self: stretch;
@@ -940,7 +1025,7 @@ nav .active {
 }
 .post--featured .post__thumb img {
   width: 100%;
-  height: 100%;
+  height: auto;
   display: block;
   object-fit: cover;
   border-radius: 0;
@@ -981,7 +1066,7 @@ nav .active {
 
 .post--compact .post__thumb img {
   width: 100%;
-  height: 100%;
+  height: auto;
   display: block;
 }
 
@@ -1015,7 +1100,7 @@ nav .active {
   margin-top: 45px;
 }
 
-.post--compact h3 {
+.post--compact h2 {
   margin-top: 25px;
 }
 
