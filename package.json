@@ -1,11 +1,13 @@
 {
-  "name": "1",
+  "name": "frontend-learning",
   "version": "1.0.0",
-  "description": "This repository is for practicing the GitHub, HTML, CSS and JS\r I wanteed to learn a little bit about GitHub and Git",
+  "description": "![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)\r ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)\r ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)\r ![React](https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB)",
   "main": "index.js",
   "scripts": {
-    "format": "prettier . --write",
-    "format:check": "prettier . --check"
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "fmt": "prettier . --check",
+    "fmt:fix": "prettier . --write"
   },
   "repository": {
     "type": "git",
@@ -19,6 +21,10 @@
   },
   "homepage": "https://github.com/LazyTanakaS/FrontEnd-Learning#readme",
   "devDependencies": {
+    "eslint": "^9.37.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-prettier": "^5.5.4",
     "prettier": "^3.6.2"
   }
 }
