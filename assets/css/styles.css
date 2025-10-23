@@ -181,6 +181,36 @@ nav li a.active::after {
   right: 0;
 }
 
+@media (max-width: 1024px) {
+  .hero .stats__value {
+    max-width: 50%;
+    padding-top: 0;
+  }
+
+  .hero .stats__value h1 {
+    color: #e87d0e;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .hero .stats__value h2 {
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .hero .stats__value p {
+    font-weight: 500;
+    line-height: 170%;
+    margin-bottom: 30px;
+  }
+
+  .hero img {
+    position: absolute;
+    top: -150px;
+    left: 430px;
+    max-width: 600px;
+    opacity: 0.9;
+  }
+}
+
 .trending {
   padding-top: 50px;
 }
@@ -213,16 +243,36 @@ nav li a.active::after {
 }
 
 .trending .games span {
-  display: block;
+  display: flex;
+  align-items: center;
   text-align: center;
   margin-top: 20px;
 }
 
 .trending .games span img {
-  position: relative;
-  top: 5px;
-  margin-right: 7px;
+  gap: 7px;
   width: 25px;
+  height: 25px;
+}
+
+@media (max-width: 1024px) {
+  .trending .games {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 50px 0;
+  }
+
+  .trending .games span img {
+    top: 5px;
+    gap: 7px;
+    width: 15px;
+    height: 15px;
+  }
+
+  .trending .block img {
+    max-width: 95%;
+  }
 }
 
 .big__text {
@@ -446,6 +496,33 @@ nav li a.active::after {
 
 .email .stats__controls button:hover {
   background-color: #8f4b03;
+}
+
+@media (max-width: 1024) {
+  .email .stats__label {
+    justify-content: center;
+    padding: 24px 20px;
+    gap: 16px;
+  }
+
+  .email .stats__controls {
+    width: 100%;
+    display: block;
+    position: static;
+  }
+
+  .email .stats__controls input {
+    padding: 14px 16px;
+  }
+
+  .email .stats__controls button {
+    position: static;
+    transform: none;
+    width: 100%;
+    margin-top: 10px;
+    line-height: 44px;
+    height: 44px;
+  }
 }
 
 @media (max-width: 768px) {
