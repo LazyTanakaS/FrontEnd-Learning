@@ -8,7 +8,7 @@ const menuLinks = document.querySelectorAll("nav a");
 menuLinks.forEach((link) => {
   const parentLi = link.closest("li");
   if (parentLi && parentLi.classList.contains("btn")) return;
-
+  ``;
   const href = link.getAttribute("href") || "";
   const hrefFile = href.split("/").pop();
   const isIndexLike = href === "" || href === "./" || href === "/" || hrefFile === "index.html";
