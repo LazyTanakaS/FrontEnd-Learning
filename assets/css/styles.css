@@ -226,10 +226,10 @@ nav li a.active::after {
   align-items: center;
   text-align: center;
   margin-top: 20px;
+  gap: 7px;
 }
 
 .trending .games span img {
-  gap: 7px;
   width: 25px;
   height: 25px;
 }
@@ -239,7 +239,7 @@ nav li a.active::after {
   font-size: 35px;
   font-weight: 600;
   text-align: center;
-  width: 800px;
+  max-width: 800px;
 }
 
 .banner {
@@ -1143,11 +1143,11 @@ footer > p {
     justify-content: space-between;
     width: 100%;
     padding: 50px 0;
+    gap: 7px;
   }
 
   .trending .games span img {
     top: 5px;
-    gap: 7px;
     width: 15px;
     height: 15px;
     margin-left: 50px;
@@ -1226,10 +1226,7 @@ footer > p {
   }
 
   .hero__about img {
-    position: absolute;
-    right: -130px;
     top: 100px;
-    border-radius: 25px;
     max-width: 68%;
   }
 
@@ -1433,7 +1430,7 @@ footer > p {
   }
 
   .trending .games span img {
-    top: 5px;
+    margin-top: 5px;
     gap: 7px;
     width: 12px;
     height: 12px;
@@ -1445,7 +1442,7 @@ footer > p {
     font-size: 24px;
     font-weight: 600;
     text-align: center;
-    width: 800px;
+    max-width: 100%;
   }
 
   .banner p {
@@ -1477,12 +1474,6 @@ footer > p {
 
   .email .stats__label p {
     font-size: 14px;
-  }
-
-  .email .stats__controls {
-    width: 100%;
-    display: flex;
-    position: relative;
   }
 
   .email .stats__controls input {
@@ -1549,11 +1540,7 @@ footer > p {
   }
 
   .hero__about img {
-    position: absolute;
-    right: -130px;
     top: 0;
-    border-radius: 25px;
-    max-width: 68%;
   }
 
   .works .badges {
@@ -1607,8 +1594,7 @@ footer > p {
   }
 
   .team .members .member_item {
-    width: 43%;
-    margin-bottom: 20px;
+    width: 10%;
   }
 
   /* Contacts Page */
