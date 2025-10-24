@@ -1,4 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800&display=swap");
+/* ============================================
+   TABLE OF CONTENTS
+   ============================================
+   
+   1. Base Styles & Reset
+   2. Layout (Container, Wrapper)
+   3. Header & Navigation
+   4. Hero Section
+   5. Trending Games
+   6. Banner
+   7. Features
+   8. Projects
+   9. Email Subscription
+   10. About Us Page
+   11. Contacts Page
+   12. Portfolio Page
+   13. News Page
+   14. Footer
+   15. Media Queries (1200px, 1024px, 992px, 768px, 576px)
+   
+============================================ */
 
 * {
   margin: 0;
@@ -687,7 +708,7 @@ nav li a.active::after {
   display: flex;
   align-items: center;
   gap: 15px;
-  padding: 50px 40px;
+  padding: 50px 100px;
   position: relative;
   flex: 1;
 }
@@ -813,7 +834,7 @@ nav li a.active::after {
 .reviews__info {
   display: flex;
   flex-wrap: wrap;
-  gap: 40px;
+  gap: 60px;
   justify-content: center;
   background: #1c140f;
   padding: 40px;
@@ -1227,6 +1248,111 @@ footer > p {
   .frame .frame__info .frame__item {
     max-width: 100%;
   }
+
+  /* Portfolio Page */
+
+  .stats__icon {
+    padding: 40px 20px;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .reviews__info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+    justify-content: center;
+    background: #1c140f;
+    padding: 40px;
+    color: #fff;
+    font-family: sans-serif;
+    margin-top: 50px;
+    text-align: center;
+  }
+
+  .reviews__info .review__item h3 {
+    font-size: 35px;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .reviews__info .review__item p {
+    font-size: 14px;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .reviews {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: #1c140f;
+    padding: 40px;
+    color: #fff;
+    font-family: sans-serif;
+  }
+
+  .card {
+    margin-bottom: 20px;
+  }
+
+  /* Contacts Page */
+
+  .hero-contact h1 {
+    font-size: 28px;
+    margin-top: 50px;
+    margin-bottom: 25px;
+  }
+
+  .hero-contact img {
+    width: 85%;
+    margin: 60px 7.5%;
+  }
+
+  .feedback form {
+    width: 70%;
+    margin: 60px auto;
+  }
+
+  .feedback form .inline {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .feedback form .inline > div {
+    width: calc(50% - 10px);
+  }
+
+  /* News Page */
+
+  .search__bar {
+    max-width: 40%;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .grid__aside {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .post--compact {
+    grid-template-columns: 180px 1fr;
+    gap: 15px;
+  }
+
+  .post--featured .post__title {
+    font-size: 26px;
+  }
+
+  .post--featured .post__excerpt {
+    font-size: 15px;
+  }
 }
 
 @media (max-width: 992px) {
@@ -1244,6 +1370,21 @@ footer > p {
   }
 
   /* About-us Page */
+
+  /* Contacts Page */
+
+  .feedback form {
+    width: 80%;
+    margin: 60px auto;
+  }
+
+  .feedback form .inline {
+    gap: 15px;
+  }
+
+  .feedback form .inline > div {
+    width: 48%;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1377,6 +1518,21 @@ footer > p {
     font-size: 12px;
   }
 
+  .stats {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 0;
+  }
+
+  .stats__icon {
+    padding: 10px 15px;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
   /* About-us Page */
 
   .hero__about .info {
@@ -1454,6 +1610,132 @@ footer > p {
     width: 43%;
     margin-bottom: 20px;
   }
+
+  /* Contacts Page */
+
+  .hero-contact h1 {
+    font-size: 24px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    padding: 0 20px;
+  }
+
+  .hero-contact p {
+    padding: 0 20px;
+    font-size: 14px;
+  }
+
+  .hero-contact img {
+    width: 95%;
+    margin: 40px 2.5%;
+  }
+
+  .feedback {
+    padding: 50px 0;
+  }
+
+  .feedback h2 {
+    font-size: 25px;
+    padding: 0 20px;
+  }
+
+  .feedback p {
+    padding: 0 20px;
+    font-size: 14px;
+  }
+
+  .feedback form {
+    width: 90%;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+
+  .feedback form .inline {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .feedback form .inline > div {
+    width: 100%;
+  }
+
+  .feedback form input,
+  .feedback form textarea {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .feedback form .one-line {
+    width: 100%;
+  }
+
+  .feedback form button {
+    width: 100%;
+    float: none;
+    padding: 15px;
+    margin-top: 10px;
+  }
+
+  /* News Page */
+
+  .services h1 {
+    font-size: 24px;
+    padding: 0 20px;
+  }
+
+  .services p {
+    font-size: 14px;
+    padding: 0 20px;
+  }
+
+  .search__bar {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 40px;
+  }
+
+  .grid__aside {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .post--compact {
+    grid-template-columns: 120px 1fr;
+    gap: 15px;
+  }
+
+  .post--compact .post__thumb img {
+    border-radius: 8px;
+  }
+
+  .post--compact .post__author {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+
+  .post--compact h2 {
+    font-size: 16px;
+    margin-top: 15px;
+  }
+
+  .post--featured .post__title {
+    font-size: 22px;
+  }
+
+  .post--featured .post__excerpt {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .post__divider {
+    margin: 40px 0;
+  }
 }
 
 @media (max-width: 576px) {
@@ -1465,4 +1747,79 @@ footer > p {
   }
 
   /* About-us Page */
+
+  /* Contacts Page */
+
+  .hero-contact h1 {
+    font-size: 20px;
+    padding: 0 15px;
+  }
+
+  .hero-contact p {
+    font-size: 13px;
+    padding: 0 15px;
+  }
+
+  .feedback {
+    padding: 40px 0;
+  }
+
+  .feedback h2 {
+    font-size: 22px;
+    padding: 0 15px;
+  }
+
+  .feedback p {
+    font-size: 13px;
+    padding: 0 15px;
+  }
+
+  .feedback form {
+    width: 95%;
+    padding: 0 15px;
+    margin: 30px auto;
+  }
+
+  .feedback form label {
+    font-size: 13px;
+  }
+
+  .feedback form input,
+  .feedback form textarea {
+    padding: 12px 8px;
+    font-size: 14px;
+  }
+
+  .feedback form textarea {
+    height: 150px;
+  }
+
+  .feedback form button {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  /* News Page */
+
+  .post--compact {
+    grid-template-columns: 100px 1fr;
+    gap: 10px;
+  }
+
+  .post--compact .post__author {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+
+  .post--compact h2 {
+    font-size: 14px;
+  }
+
+  .post--featured .post__title {
+    font-size: 20px;
+  }
+
+  .post--featured .post__excerpt {
+    font-size: 13px;
+  }
 }
