@@ -1,17 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800&display=swap");
 
-/* ===== Breakpoints ===== */
-@media (max-width: 1400px) {
-}
-@media (max-width: 1200px) {
-}
-@media (max-width: 992px) {
-}
-@media (max-width: 768px) {
-}
-@media (max-width: 576px) {
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -181,36 +169,6 @@ nav li a.active::after {
   right: 0;
 }
 
-@media (max-width: 1024px) {
-  .hero .stats__value {
-    max-width: 50%;
-    padding-top: 0;
-  }
-
-  .hero .stats__value h1 {
-    color: #e87d0e;
-    font-size: 20px;
-    font-weight: 600;
-  }
-  .hero .stats__value h2 {
-    font-size: 20px;
-    font-weight: 600;
-  }
-  .hero .stats__value p {
-    font-weight: 500;
-    line-height: 170%;
-    margin-bottom: 30px;
-  }
-
-  .hero img {
-    position: absolute;
-    top: -150px;
-    left: 430px;
-    max-width: 600px;
-    opacity: 0.9;
-  }
-}
-
 .trending {
   padding-top: 50px;
 }
@@ -253,26 +211,6 @@ nav li a.active::after {
   gap: 7px;
   width: 25px;
   height: 25px;
-}
-
-@media (max-width: 1024px) {
-  .trending .games {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    padding: 50px 0;
-  }
-
-  .trending .games span img {
-    top: 5px;
-    gap: 7px;
-    width: 15px;
-    height: 15px;
-  }
-
-  .trending .block img {
-    max-width: 95%;
-  }
 }
 
 .big__text {
@@ -359,25 +297,6 @@ nav li a.active::after {
   gap: 24px;
   margin: 0 auto 35px;
   max-width: 1200px;
-}
-
-@media (max-width: 1200px) {
-  .projects__grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (max-width: 992px) {
-  .projects__grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 576px) {
-  .projects__grid {
-    grid-template-columns: 1fr;
-    gap: 15px;
-  }
 }
 
 .item {
@@ -498,60 +417,6 @@ nav li a.active::after {
   background-color: #8f4b03;
 }
 
-@media (max-width: 1024) {
-  .email .stats__label {
-    justify-content: center;
-    padding: 24px 20px;
-    gap: 16px;
-  }
-
-  .email .stats__controls {
-    width: 100%;
-    display: block;
-    position: static;
-  }
-
-  .email .stats__controls input {
-    padding: 14px 16px;
-  }
-
-  .email .stats__controls button {
-    position: static;
-    transform: none;
-    width: 100%;
-    margin-top: 10px;
-    line-height: 44px;
-    height: 44px;
-  }
-}
-
-@media (max-width: 768px) {
-  .email .stats__label {
-    justify-content: center;
-    padding: 24px 20px;
-    gap: 16px;
-  }
-
-  .email .stats__controls {
-    width: 100%;
-    display: block;
-    position: static;
-  }
-
-  .email .stats__controls input {
-    padding: 14px 16px;
-  }
-
-  .email .stats__controls button {
-    position: static;
-    transform: none;
-    width: 100%;
-    margin-top: 10px;
-    line-height: 44px;
-    height: 44px;
-  }
-}
-
 /* about__us Page */
 .hero__about {
   position: relative;
@@ -566,7 +431,7 @@ nav li a.active::after {
 
 .hero__about .info {
   width: 500px;
-  padding: 15rem 0;
+  padding: 12rem 0;
 }
 
 .hero__about .info h1 {
@@ -653,7 +518,7 @@ nav li a.active::after {
 
 .team .members .member_item {
   width: 22%;
-  border-radius: 10px;
+  border-radius: 15px;
   padding: 25px 15px;
   background: #1c140f;
   text-align: center;
@@ -662,7 +527,7 @@ nav li a.active::after {
 
 .team .members .member_item h3 {
   font-size: 20px;
-  margin: 20px 0;
+  margin-top: -20px;
   text-align: center;
   top: 100px;
 }
@@ -825,15 +690,6 @@ nav li a.active::after {
   padding: 50px 40px;
   position: relative;
   flex: 1;
-}
-
-@media (max-width: 992px) {
-  .stats {
-    --gap: 24px;
-  }
-  .stats__icon:not(:last-child)::after {
-    display: none;
-  }
 }
 
 .video,
@@ -1221,4 +1077,392 @@ footer hr {
 
 footer > p {
   text-align: center;
+}
+
+/* ===== Media Queries ===== */
+@media (max-width: 1200px) {
+  .projects__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 1024px) {
+  /* Home-Page */
+
+  .hero .stats__value {
+    max-width: 50%;
+    padding-top: 0;
+  }
+
+  .hero .stats__value h1 {
+    color: #e87d0e;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .hero .stats__value h2 {
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .hero .stats__value p {
+    font-weight: 500;
+    line-height: 170%;
+    margin-bottom: 30px;
+  }
+
+  .hero img {
+    position: absolute;
+    top: -150px;
+    left: 430px;
+    max-width: 600px;
+    opacity: 0.9;
+  }
+
+  .trending .games {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 50px 0;
+  }
+
+  .trending .games span img {
+    top: 5px;
+    gap: 7px;
+    width: 15px;
+    height: 15px;
+    margin-left: 50px;
+  }
+
+  .trending .block img {
+    max-width: 95%;
+  }
+
+  .banner h3 {
+    font-size: 14px;
+  }
+
+  .banner p {
+    line-height: 170%;
+    margin-bottom: 30px;
+    width: 100%;
+  }
+
+  .email .stats__label {
+    justify-content: start;
+    padding: 24px 20px;
+    gap: 16px;
+  }
+
+  .email .stats__controls {
+    width: 100%;
+    display: flex;
+    position: relative;
+  }
+
+  .email .stats__controls input {
+    padding: 16px 120px 16px 20px;
+    width: 100%;
+  }
+
+  .email .stats__controls button {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 40px;
+    padding: 0 20px;
+    line-height: 40px;
+    width: auto;
+  }
+
+  footer .block p {
+    width: 250px;
+    margin: 15px 0;
+    font-size: 14px;
+  }
+
+  footer .block h4 {
+    font-weight: 500;
+    font-size: 16px;
+  }
+
+  footer .block ul li {
+    margin-top: 5px;
+    opacity: 0.8;
+    font-size: 14px;
+  }
+
+  /* About-us Page */
+  .hero__about .info {
+    max-width: 50%;
+  }
+
+  .hero__about .info p {
+    font-size: 14px;
+  }
+
+  .hero__about .info h1 {
+    font-size: 25px;
+  }
+
+  .hero__about img {
+    position: absolute;
+    right: -130px;
+    top: 100px;
+    border-radius: 25px;
+    max-width: 68%;
+  }
+
+  .works h2 {
+    font-size: 25px;
+  }
+  .works p {
+    font-size: 12px;
+  }
+
+  .frame .frame__info {
+    gap: 50px;
+    padding: 40px;
+  }
+
+  .frame .frame__info .frame__item {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 992px) {
+  /* Home-Page */
+
+  .projects__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stats {
+    --gap: 24px;
+  }
+  .stats__icon:not(:last-child)::after {
+    display: none;
+  }
+
+  /* About-us Page */
+}
+
+@media (max-width: 768px) {
+  /* Home-Page */
+
+  header nav {
+    float: none;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  header nav ul {
+    gap: 10px;
+  }
+
+  .hero .stats__value {
+    max-width: 55%;
+    padding-top: 0;
+  }
+
+  .hero .stats__value h1 {
+    color: #e87d0e;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .hero .stats__value h2 {
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .hero .stats__value p {
+    font-weight: 500;
+    line-height: 170%;
+    margin-bottom: 30px;
+  }
+
+  .hero img {
+    position: absolute;
+    top: -170px;
+    left: 150px;
+    max-width: 600px;
+    opacity: 0.2;
+  }
+
+  .trending .games span {
+    font-size: 14px;
+  }
+
+  .trending .games span img {
+    top: 5px;
+    gap: 7px;
+    width: 12px;
+    height: 12px;
+    margin-left: 50px;
+  }
+
+  .big__text {
+    padding: 25px;
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    width: 800px;
+  }
+
+  .banner p {
+    line-height: 170%;
+    margin-bottom: 30px;
+    width: 100%;
+  }
+
+  .features h3,
+  .features p {
+    margin-bottom: 20px;
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .features .info p {
+    font-size: 12px;
+  }
+
+  .email .stats__label {
+    justify-content: start;
+    padding: 24px 20px;
+    gap: 16px;
+  }
+
+  .email .stats__label h4 {
+    font-size: 25px;
+  }
+
+  .email .stats__label p {
+    font-size: 14px;
+  }
+
+  .email .stats__controls {
+    width: 100%;
+    display: flex;
+    position: relative;
+  }
+
+  .email .stats__controls input {
+    padding: 16px 120px 16px 20px;
+    width: 100%;
+  }
+
+  .email .stats__controls button {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 40px;
+    padding: 0 20px;
+    line-height: 40px;
+    width: auto;
+  }
+
+  footer .block p {
+    width: 250px;
+    margin: 15px 0;
+    font-size: 12px;
+  }
+
+  footer .block h4 {
+    font-weight: 500;
+    font-size: 14px;
+  }
+
+  footer .block ul li {
+    margin-top: 5px;
+    opacity: 0.8;
+    font-size: 12px;
+  }
+
+  /* About-us Page */
+
+  .hero__about .info {
+    max-width: 50%;
+    padding: 5rem 0;
+  }
+
+  .hero__about .info p {
+    font-size: 12px;
+  }
+
+  .hero__about .info h1 {
+    font-size: 20px;
+  }
+
+  .hero__about img {
+    position: absolute;
+    right: -130px;
+    top: 0;
+    border-radius: 25px;
+    max-width: 68%;
+  }
+
+  .works .badges {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .works .badges .badges__info {
+    width: 100%;
+    border-radius: 10px;
+    padding: 30px 20px;
+    background: #1c140f;
+  }
+
+  .works .badges .badges__info .badge {
+    border-radius: 7px;
+    padding: 8px 12px;
+    font-size: 16px;
+  }
+
+  .works h2 {
+    font-size: 20px;
+  }
+
+  .works p {
+    font-size: 12px;
+  }
+
+  .frame .frame__info {
+    flex-direction: column;
+    gap: 30px;
+    padding: 30px;
+  }
+
+  .frame .frame__info .frame__item {
+    max-width: 100%;
+  }
+  .frame .frame__info .frame__item p {
+    margin-top: 5px;
+  }
+
+  .frame .frame__info img {
+    flex: none;
+    max-width: 100%;
+  }
+
+  .team .members {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .team .members .member_item {
+    width: 43%;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  /* Home-Page */
+
+  .projects__grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  /* About-us Page */
 }
