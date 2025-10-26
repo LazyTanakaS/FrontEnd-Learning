@@ -23,6 +23,8 @@
   --color-text-secondary: #cccccc; /* Gray text */
   --color-text-muted: #898989; /* Muted text */
   --color-text-dark: #333333; /* Dark text */
+  --color-text-city: #9fb0c2; /* City text in reviews */
+  --color-text-review: #e6e0db; /* Review text color */
 
   /* Status/badge colors */
   --color-badge-purple: #2c1226;
@@ -46,6 +48,12 @@
   --color-border: #cecece;
   --color-border-light: rgba(255, 255, 255, 0.4);
   --color-divider: #a5a5a5;
+
+  /* Form colors */
+
+  --color-form-label: #4f4f4f;
+  --color-form-input-bg: #2c2420;
+  --color-form-button-hover: #a51b02;
 
   /* ========== SIZES AND SPACING ========== */
 
