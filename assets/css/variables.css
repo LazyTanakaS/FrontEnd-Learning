@@ -12,6 +12,7 @@
   --color-bg-secondary: #1c140f; /* Dark brown */
   --color-bg-tertiary: #25211d; /* Light brown */
   --color-bg-card: #0f0f0f; /* Card background */
+  --color-bg-feedback: #dc7000; /* Feedback background */
 
   /* Gradients */
   --gradient-main: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(74, 40, 0, 1) 100%);
