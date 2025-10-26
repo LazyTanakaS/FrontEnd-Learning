@@ -1,0 +1,127 @@
+:root {
+  /* ========== COLORS ========== */
+
+  /* Brand primary colors */
+  --color-primary: #fa9021; /* Orange - main color */
+  --color-primary-dark: #8f4b03; /* Dark orange for hover */
+  --color-primary-light: #e87d0e; /* Light orange */
+  --color-accent: #ff6600; /* Accent color */
+
+  /* Background colors */
+  --color-bg-primary: #000000; /* Black background */
+  --color-bg-secondary: #1c140f; /* Dark brown */
+  --color-bg-tertiary: #25211d; /* Light brown */
+  --color-bg-card: #0f0f0f; /* Card background */
+
+  /* Gradients */
+  --gradient-main: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(74, 40, 0, 1) 100%);
+  --gradient-hero: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+
+  /* Text colors */
+  --color-text-primary: #ffffff; /* White text */
+  --color-text-secondary: #cccccc; /* Gray text */
+  --color-text-muted: #898989; /* Muted text */
+  --color-text-dark: #333333; /* Dark text */
+
+  /* Status/badge colors */
+  --color-badge-purple: #2c1226;
+  --color-badge-green: #192a1d;
+  --color-badge-brown: #31190d;
+
+  /* Post/author colors */
+  --color-author-pink: #ff8484;
+  --color-author-blue: #2351f5;
+  --color-author-orange: #ff7c32;
+  --color-author-green: #23a54f;
+  --color-author-purple: #9921c3;
+
+  /* State colors */
+  --color-success: #27ae60;
+  --color-error: #e74c3c;
+  --color-warning: #ffc107;
+  --color-info: #3498db;
+
+  /* Borders and dividers */
+  --color-border: #cecece;
+  --color-border-light: rgba(255, 255, 255, 0.4);
+  --color-divider: #a5a5a5;
+
+  /* ========== SIZES AND SPACING ========== */
+
+  /* Container sizes */
+  --container-max-width: 85%;
+  --container-padding: var(--spacing-sm) var(--spacing-md);
+
+  /* ========== TYPOGRAPHY ========== */
+
+  /* Font sizes */
+  --font-size-xs: 12px;
+  --font-size-sm: 14px;
+  --font-size-base: 16px;
+  --font-size-lg: 17px;
+  --font-size-xl: 20px;
+  --font-size-2xl: 24px;
+  --font-size-3xl: 30px;
+  --font-size-4xl: 35px;
+  --font-size-5xl: 50px;
+
+  /* Font weights */
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+
+  /* Line heights */
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.7;
+
+  /* Font families */
+  --font-family-primary: "Poppins", sans-serif;
+
+  /* ========== BORDER RADIUS ========== */
+
+  --border-radius-sm: 5px;
+  --border-radius-md: 10px;
+  --border-radius-lg: 15px;
+  --border-radius-xl: 18px;
+  --border-radius-2xl: 20px;
+  --border-radius-3xl: 25px;
+  --border-radius-round: 50px;
+  --border-radius-circle: 50%;
+
+  /* ========== SHADOWS ========== */
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.15);
+  --shadow-glow: 0 4px 18px rgba(255, 154, 61, 0.25);
+
+  /* ========== TRANSITIONS ========== */
+
+  --transition-fast: 200ms ease;
+  --transition-normal: 300ms ease;
+  --transition-slow: 500ms ease;
+  --transition-all: all var(--transition-slow) ease;
+
+  /* ========== Z-INDEX ========== */
+
+  --z-index-base: 1;
+  --z-index-dropdown: 10;
+  --z-index-sticky: 100;
+  --z-index-fixed: 1000;
+  --z-index-modal: 10000;
+
+  /* ========== SPECIFIC VALUES ========== */
+
+  /* Feature grid block width */
+  --feature-block-width: 20%;
+
+  /* Gap for stats section */
+  --stats-gap: 80px;
+
+  /* Maximum width for projects */
+  --projects-max-width: 1200px;
+}
