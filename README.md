@@ -107,6 +107,6 @@ If GitHub Pages does not open automatically:
 
 ## Author
 
-**Tanaka**  
+**Petr Komar**  
 Aspiring Front-End Developer — learning by building and experimenting with real code.  
 Focused on growth, creativity, and developing professional front-end skills.
